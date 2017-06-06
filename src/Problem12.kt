@@ -2,12 +2,12 @@ fun main(args: Array<String>) {
     var totalDivisors: Int = 0
     var temp = 1
 
-    while (totalDivisors < 502){
-        totalDivisors = findDivisors(generateTriangleNumber(temp)).size
+    do {
+        totalDivisors = findDivisors(generateTriangleNumber(temp)).count()
         temp++
-    }
+    } while (totalDivisors < 501)
 
-    print(temp)
+    print(generateTriangleNumber(--temp))
 }
 
 fun generateTriangleNumber(number: Int): Int{
